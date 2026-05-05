@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Předplatné | GeoGuide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo-link">
+                <div class="header__logo-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.43 4 16.05 4 12C4 11.38 4.08 10.79 4.21 10.21L9 15V16C9 17.1 9.9 18 11 18V19.93ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10.5C8 10.22 8.22 10 8.5 10H11V8C11 7.45 10.55 7 10 7H6.74C7.57 5.22 9.3 4 11.3 4C14.73 4 17.58 6.42 18.23 9.69C18.66 11.83 18.52 14.7 17.9 17.39Z" />
+                    </svg>
+                </div>
+                <span class="header__logo-text">GeoGuide</span>
+            </a>
+
+            <button class="header__mobile-btn" aria-label="Toggle menu">
+                <span class="header__hamburger"></span>
+            </button>
+
+            <nav>
+                <menu class="header__nav-list">
+                    <li><a href="index.html" class="header__nav-link">Domů</a></li>
+                    <li><a href="guide.html" class="header__nav-link">Průvodce</a></li>
+                    <li><a href="pricing.html" class="header__nav-link header__nav-link--active">Předplatné</a></li>
+                    <li><a href="resources.html" class="header__nav-link">Jak dál</a></li>
+                </menu>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Page Intro Banner -->
+        <section class="page-intro">
+            <div class="container reveal">
+                <h1 class="page-intro__title">Vyplatí se předplatné?</h1>
+                <p class="page-intro__desc">GeoGuessr nedávno změnil svůj platební model. Zde je přehled toho, co jednotlivé
+                    verze nabízejí a zda pro vás mají smysl jako pro začátečníka.</p>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="section u-pt-0">
+            <div class="container">
+                <div class="pricing-grid">
+
+                    <!-- Basic Plan -->
+                    <article class="pricing-card reveal" style="transition-delay: 0.1s;">
+                        <h2 class="pricing-card__title">Basic</h2>
+                        <div class="pricing-card__price">Kč 708 <span>/ rok</span></div>
+                        <p class="pricing-card__period">Účtováno ročně</p>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">Hraní 5 minut každých 15 minut</li>
+                            <li class="pricing-card__feature">Bez reklam</li>
+                            <li class="pricing-card__feature">Komunitní mapy</li>
+                            <li class="pricing-card__feature pricing-card__feature--disabled">Neomezené hraní</li>
+                            <li class="pricing-card__feature pricing-card__feature--disabled">Privátní párty s přáteli</li>
+                            <li class="pricing-card__feature pricing-card__feature--disabled">Creator mód</li>
+                            <li class="pricing-card__feature pricing-card__feature--disabled">Elite kosmetické úpravy</li>
+                        </ul>
+                        <a href="https://www.geoguessr.com/pro" target="_blank" class="btn btn--secondary btn--full pricing-card__btn">Vybrat Basic</a>
+                    </article>
+
+                    <!-- Pro Plan (Recommended) -->
+                    <article class="pricing-card pricing-card--popular reveal" style="transition-delay: 0.2s;">
+                        <div class="pricing-card__badge">Doporučeno pro většinu hráčů</div>
+                        <h2 class="pricing-card__title">Pro</h2>
+                        <div class="pricing-card__price">Kč 948 <span>/ rok</span></div>
+                        <p class="pricing-card__period">Nejoblíbenější volba</p>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">Neomezené hraní</li>
+                            <li class="pricing-card__feature">Bez reklam</li>
+                            <li class="pricing-card__feature">Privátní párty (přátelé hrají zdarma)</li>
+                            <li class="pricing-card__feature">Přístup na web a mobil</li>
+                            <li class="pricing-card__feature">Tvorba komunitních map</li>
+                            <li class="pricing-card__feature pricing-card__feature--disabled">Creator mód</li>
+                            <li class="pricing-card__feature pricing-card__feature--disabled">Elite kosmetické úpravy</li>
+                        </ul>
+                        <a href="https://www.geoguessr.com/pro" target="_blank" class="btn btn--full pricing-card__btn">Vybrat Pro</a>
+                    </article>
+
+                    <!-- Elite Plan -->
+                    <article class="pricing-card reveal" style="transition-delay: 0.3s;">
+                        <h2 class="pricing-card__title">Elite</h2>
+                        <div class="pricing-card__price">Kč 1,428 <span>/ rok</span></div>
+                        <p class="pricing-card__period">Nejlepší hodnota pro profíky</p>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">Vše z Pro verze</li>
+                            <li class="pricing-card__feature">Creator mód (kvízy)</li>
+                            <li class="pricing-card__feature">Přístup i na Steam (PC verze)</li>
+                            <li class="pricing-card__feature">Spolupráce na mapách</li>
+                            <li class="pricing-card__feature">Elite kosmetické odměny</li>
+                            <li class="pricing-card__feature">Přednostní podpora</li>
+                        </ul>
+                        <a href="https://www.geoguessr.com/pro" target="_blank" class="btn btn--secondary btn--full pricing-card__btn">Vybrat Elite</a>
+                    </article>
+
+                </div>
+
+                <!-- Recommendation Section -->
+                <div class="reveal u-max-width-800 u-bg-white u-p-2rem u-text-center u-mt-4rem">
+                    <h2 class="section__title" style="font-size: 1.5rem;">Naše doporučení pro začátečníky</h2>
+                    <p class="u-font-1-1 u-opacity-90" style="margin-bottom: 0;">
+                        Pokud si hru chcete jen občas vyzkoušet, účet zdarma s omezením sice existuje, ale je velmi
+                        frustrující. Verze <strong>Basic</strong> je dobrý start. Pokud ovšem plánujete hrát s přáteli
+                        online (tzv. parties) nebo se chcete hře věnovat pravidelně, verze <strong>Pro</strong> je naprosto
+                        ideální – stačí totiž, když si ji zaplatí jeden člověk, a všichni jeho přátelé mohou v jeho "party"
+                        hrát zcela zdarma. <strong>Elite</strong> pro běžné hraní nepotřebujete.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <div class="footer__title">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.43 4 16.05 4 12C4 11.38 4.08 10.79 4.21 10.21L9 15V16C9 17.1 9.9 18 11 18V19.93ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10.5C8 10.22 8.22 10 8.5 10H11V8C11 7.45 10.55 7 10 7H6.74C7.57 5.22 9.3 4 11.3 4C14.73 4 17.58 6.42 18.23 9.69C18.66 11.83 18.52 14.7 17.9 17.39Z" />
+                        </svg>
+                        GeoGuide
+                    </div>
+                    <p class="footer__desc">Vizuální průvodce světem GeoGuessru pro začátečníky. Žádné dlouhé texty, jen
+                        to nejdůležitější pro dobrý start.</p>
+                </div>
+                <div>
+                    <div class="footer__title">Rychlé odkazy</div>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a href="index.html" class="footer__list-link">Domů</a></li>
+                        <li class="footer__list-item"><a href="guide.html" class="footer__list-link">Průvodce metami</a></li>
+                        <li class="footer__list-item"><a href="pricing.html" class="footer__list-link">Ceny předplatného</a></li>
+                        <li class="footer__list-item"><a href="resources.html" class="footer__list-link">Externí zdroje</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer__title">Školní projekt</div>
+                    <p class="footer__desc">Tento web byl vytvořen jako školní projekt.</p>
+                    <p class="footer__desc"><strong>Autor:</strong> Petr Novák</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                &copy; 2026 GeoGuide – Beginner's GeoGuessr Guide. Vytvořeno pro vzdělávací účely.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
