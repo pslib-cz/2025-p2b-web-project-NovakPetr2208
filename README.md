@@ -21,5 +21,5 @@ Dělám to pro úplné nováčky nebo pro ty, co hrají jen občas pro zábavu a
 
 ### Odkazy
 
-* 🎨 **Grafický návrh a Wirediagram (Figma):** odkaz bude tady 
+* 🎨 **Grafický návrh a Wirediagram (Figma):** v assets/wirediagrams/
 * 🚀 **Živý web (GitHub Pages):** https://pslib-cz.github.io/2025-p2b-web-project-NovakPetr2208/
