@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Průvodce | GeoGuide</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo-link">
+                <div class="header__logo-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.43 4 16.05 4 12C4 11.38 4.08 10.79 4.21 10.21L9 15V16C9 17.1 9.9 18 11 18V19.93ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10.5C8 10.22 8.22 10 8.5 10H11V8C11 7.45 10.55 7 10 7H6.74C7.57 5.22 9.3 4 11.3 4C14.73 4 17.58 6.42 18.23 9.69C18.66 11.83 18.52 14.7 17.9 17.39Z"/>
+                    </svg>
+                </div>
+                <span class="header__logo-text">GeoGuide</span>
+            </a>
+
+            <button class="header__mobile-btn" aria-label="Toggle menu">
+                <span class="header__hamburger"></span>
+            </button>
+
+            <nav>
+                <menu class="header__nav-list">
+                    <li><a href="index.html" class="header__nav-link">Domů</a></li>
+                    <li><a href="guide.html" class="header__nav-link header__nav-link--active">Průvodce</a></li>
+                    <li><a href="pricing.html" class="header__nav-link">Předplatné</a></li>
+                    <li><a href="resources.html" class="header__nav-link">Jak dál</a></li>
+                </menu>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Page Intro Banner -->
+        <section class="page-intro">
+            <div class="container reveal">
+                <h1 class="page-intro__title">Začátečnické Mety</h1>
+                <p class="page-intro__desc">Tato pravidla nejsou stoprocentní a nefungují vždy dokonale, ale dají ti jako začátečníkovi obrovskou výhodu a silný startovní bod při každém hádání.</p>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="section u-pt-0">
+            <div class="container">
+                <div class="gallery-grid">
+                    
+                    <!-- Card 1 -->
+                    <article class="meta-card reveal" data-meta="sun">
+                        <img src="assets/images/guide/whattolook_sundirection.webp" alt="Slunce nad silnicí" class="meta-card__img" width="600" height="400">
+                        <div class="meta-card__content">
+                            <h2 class="meta-card__title">SUN META</h2>
+                            <p class="meta-card__desc">Naučte se využít slunce k okamžitému určení polokoule. Je to nejlepší startovní bod pro každé hádání.</p>
+                            <button class="btn btn--secondary meta-card__btn">Zobrazit detail</button>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="meta-card reveal" data-meta="drive-side" style="transition-delay: 0.1s;">
+                        <img src="assets/images/guide/driving_direction.jpg" alt="Strana řízení" class="meta-card__img" width="600" height="400">
+                        <div class="meta-card__content">
+                            <h2 class="meta-card__title">STRANA ŘÍZENÍ</h2>
+                            <p class="meta-card__desc">Zjistěte, které země jezdí vlevo a jak to bezpečně poznat z aut nebo značek. Eliminuje to velkou část světa.</p>
+                            <button class="btn btn--secondary meta-card__btn">Zobrazit detail</button>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="meta-card reveal" data-meta="lines" style="transition-delay: 0.2s;">
+                        <img src="assets/images/guide/road_lines_meta.png" alt="Čáry na silnici" class="meta-card__img" width="600" height="400">
+                        <div class="meta-card__content">
+                            <h2 class="meta-card__title">ČÁRY NA SILNICI</h2>
+                            <p class="meta-card__desc">Základní rozdíly v barvách čar na silnici. Jednoduchý způsob, jak odlišit Ameriku od Evropy.</p>
+                            <button class="btn btn--secondary meta-card__btn">Zobrazit detail</button>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="meta-card reveal" data-meta="plates" style="transition-delay: 0.3s;">
+                        <img src="assets/images/guide/number-plates-of-europe-v0-w89xlab9bzdc1.webp" alt="Poznávací značky" class="meta-card__img" width="600" height="400">
+                        <div class="meta-card__content">
+                            <h2 class="meta-card__title">POZNÁVACÍ ZNAČKY (SPZ)</h2>
+                            <p class="meta-card__desc">Dlouhé evropské značky s modrým pruhem versus krátké americké. Nenápadný detail, který je vidět všude.</p>
+                            <button class="btn btn--secondary meta-card__btn">Zobrazit detail</button>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="meta-card reveal" data-meta="language" style="transition-delay: 0.1s;">
+                        <img src="assets/images/guide/language_meta.png" alt="Jazyky a abecedy" class="meta-card__img" width="600" height="400">
+                        <div class="meta-card__content">
+                            <h2 class="meta-card__title">JAZYKY A ABECEDY</h2>
+                            <p class="meta-card__desc">Rozpoznejte vizuální styl různých abeced a znaků. I bez znalosti jazyka vás text rychle nasměruje.</p>
+                            <button class="btn btn--secondary meta-card__btn">Zobrazit detail</button>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="meta-card reveal" data-meta="bollards" style="transition-delay: 0.2s;">
+                        <img src="assets/images/guide/bollard-cz.png" alt="Patníky u silnice" class="meta-card__img" width="600" height="400">
+                        <div class="meta-card__content">
+                            <h2 class="meta-card__title">PATNÍKY U SILNICE (BOLLARDS)</h2>
+                            <p class="meta-card__desc">Unikátní patníky a odrazky podél silnic. Jedna z nejoblíbenějších met pro přesné určení státu v Evropě.</p>
+                            <button class="btn btn--secondary meta-card__btn">Zobrazit detail</button>
+                        </div>
+                    </article>
+
+                    <!-- Card 7 -->
+                    <article class="meta-card reveal" data-meta="poles" style="transition-delay: 0.3s;">
+                        <img src="assets/images/guide/ro_holeypole.png" alt="Elektrické sloupy" class="meta-card__img" width="600" height="400">
+                        <div class="meta-card__content">
+                            <h2 class="meta-card__title">ELEKTRICKÉ SLOUPY</h2>
+                            <p class="meta-card__desc">Materiál a tvar elektrických sloupů. Neocenitelná nápověda uprostřed prázdné krajiny.</p>
+                            <button class="btn btn--secondary meta-card__btn">Zobrazit detail</button>
+                        </div>
+                    </article>
+
+                    <!-- Card 8 -->
+                    <article class="meta-card reveal" data-meta="car" style="transition-delay: 0.4s;">
+                        <img src="assets/images/guide/car_meta.avif" alt="Google auto" class="meta-card__img" width="600" height="400">
+                        <div class="meta-card__content">
+                            <h2 class="meta-card__title">GOOGLE AUTO A KAMERA</h2>
+                            <p class="meta-card__desc">Auto, které fotí Street View. Od šnorchlu v Keni po pásku v Ghaně – někdy samotné auto prozradí zemi.</p>
+                            <button class="btn btn--secondary meta-card__btn">Zobrazit detail</button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Overlay -->
+    <div class="modal" id="metaModal" aria-hidden="true" role="dialog">
+        <div class="modal__content">
+            <button class="modal__close" id="modalClose" aria-label="Zavřít modal">&times;</button>
+            <img src="" alt="Detail mety" class="modal__img" id="modalImg" width="800" height="400">
+            <div class="modal__body">
+                <span class="modal__region" id="modalRegion">Region</span>
+                <h3 class="modal__title" id="modalTitle">Název Mety</h3>
+                <p class="modal__text" id="modalText">Základní popis problému.</p>
+                <div class="modal__good-for" id="modalGoodFor">
+                    <strong>K čemu je to dobré?</strong>
+                    <span id="modalGoodForText">Text k čemu to je.</span>
+                </div>
+                <div class="modal__tip">
+                    <div class="modal__tip-title">Tip pro začátečníky:</div>
+                    <div id="modalTipText">Zde bude speciální rada.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <div class="footer__title">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.43 4 16.05 4 12C4 11.38 4.08 10.79 4.21 10.21L9 15V16C9 17.1 9.9 18 11 18V19.93ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10.5C8 10.22 8.22 10 8.5 10H11V8C11 7.45 10.55 7 10 7H6.74C7.57 5.22 9.3 4 11.3 4C14.73 4 17.58 6.42 18.23 9.69C18.66 11.83 18.52 14.7 17.9 17.39Z"/>
+                        </svg>
+                        GeoGuide
+                    </div>
+                    <p class="footer__desc">Vizuální průvodce světem GeoGuessru pro začátečníky. Žádné dlouhé texty, jen to nejdůležitější pro dobrý start.</p>
+                </div>
+                <div>
+                    <div class="footer__title">Rychlé odkazy</div>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a href="index.html" class="footer__list-link">Domů</a></li>
+                        <li class="footer__list-item"><a href="guide.html" class="footer__list-link">Průvodce metami</a></li>
+                        <li class="footer__list-item"><a href="pricing.html" class="footer__list-link">Ceny předplatného</a></li>
+                        <li class="footer__list-item"><a href="resources.html" class="footer__list-link">Externí zdroje</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer__title">Školní projekt</div>
+                    <p class="footer__desc">Tento web byl vytvořen jako školní projekt zaměřený na čisté HTML, CSS a JavaScript.</p>
+                    <p class="footer__desc"><strong>Autor:</strong> Petr Novák</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                &copy; 2026 GeoGuide – Beginner's GeoGuessr Guide. Vytvořeno pro vzdělávací účely.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
