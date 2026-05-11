@@ -1,36 +1,63 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Sticky Navigation & Scroll Effects
     const header = document.querySelector('.header');
-    
+
+    let isScrolling = false;
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            header.classList.add('header--scrolled');
-        } else {
-            header.classList.remove('header--scrolled');
+        if (!isScrolling) {
+            window.requestAnimationFrame(() => {
+                if (header) {
+                    if (window.scrollY > 20) {
+                        header.classList.add('header--scrolled');
+                    } else {
+                        header.classList.remove('header--scrolled');
+                    }
+                }
+                isScrolling = false;
+            });
+            isScrolling = true;
         }
-    });
+    }, { passive: true });
 
     // 2. Mobile Menu Toggle
     const mobileBtn = document.querySelector('.header__mobile-btn');
     const navLinks = document.querySelector('.header__nav-list');
     const hamburger = document.querySelector('.header__hamburger');
+    const headerOverlay = document.querySelector('.header__overlay');
+
+    const toggleMenu = (forceClose = false) => {
+        if (!navLinks || !hamburger || !mobileBtn) return;
+
+        const isActive = navLinks.classList.contains('header__nav-list--active');
+        const willBeActive = forceClose ? false : !isActive;
+
+        if (willBeActive) {
+            navLinks.classList.add('header__nav-list--active');
+            hamburger.classList.add('header__hamburger--active');
+            mobileBtn.setAttribute('aria-expanded', 'true');
+            if (headerOverlay) headerOverlay.classList.add('header__overlay--active');
+            document.body.classList.add('body--locked');
+        } else {
+            navLinks.classList.remove('header__nav-list--active');
+            hamburger.classList.remove('header__hamburger--active');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            if (headerOverlay) headerOverlay.classList.remove('header__overlay--active');
+            document.body.classList.remove('body--locked');
+        }
+    };
 
     if (mobileBtn) {
-        mobileBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('header__nav-list--active');
-            hamburger.classList.toggle('header__hamburger--active');
-        });
+        mobileBtn.addEventListener('click', () => toggleMenu());
+    }
+
+    if (headerOverlay) {
+        headerOverlay.addEventListener('click', () => toggleMenu(true));
     }
 
     // Close mobile menu when clicking a link
     const navItems = document.querySelectorAll('.header__nav-link');
     navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            if (navLinks && navLinks.classList.contains('header__nav-list--active')) {
-                navLinks.classList.remove('header__nav-list--active');
-                hamburger.classList.remove('header__hamburger--active');
-            }
-        });
+        item.addEventListener('click', () => toggleMenu(true));
     });
 
     // Set active link based on current page
@@ -45,13 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Scroll Reveal Animations
     const revealElements = document.querySelectorAll('.reveal');
-    
+
     const revealOptions = {
         threshold: 0.15,
         rootMargin: "0px 0px -50px 0px"
     };
 
-    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+    const revealOnScroll = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
                 return;
@@ -144,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalImg.src = imgSrc;
         modalRegion.textContent = data.region;
         modalText.textContent = data.text;
-        
+
         const goodForEl = document.getElementById('modalGoodFor');
         const goodForTextEl = document.getElementById('modalGoodForText');
         if (goodForEl && goodForTextEl && data.goodFor) {
@@ -153,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (goodForEl) {
             goodForEl.style.display = 'none';
         }
-        
+
         if (data.tip) {
             modalTipText.innerHTML = data.tip;
             modalTipBox.style.display = 'block';
@@ -162,12 +189,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         modalOverlay.classList.add('modal--active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling underneath
+        document.body.classList.add('body--locked');
     };
 
     const closeModal = () => {
+        if (!modalOverlay) return;
         modalOverlay.classList.remove('modal--active');
-        document.body.style.overflow = '';
+        document.body.classList.remove('body--locked');
     };
 
     // Attach click events to all meta cards
@@ -207,4 +235,22 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
+
+    // 5. Initialize Swiper Carousel
+    const swiperEl = document.querySelector('.practical-carousel');
+    if (swiperEl && typeof Swiper !== 'undefined') {
+        new Swiper('.practical-carousel', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    }
 });

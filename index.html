@@ -17,6 +17,9 @@
 
 <body>
 
+    <!-- Header Overlay -->
+    <div class="header__overlay" aria-hidden="true"></div>
+
     <!-- Header / Navigation -->
     <header class="header">
         <div class="container header__container">
@@ -30,7 +33,7 @@
                 <span class="header__logo-text">GeoGuide</span>
             </a>
 
-            <button class="header__mobile-btn" aria-label="Toggle menu">
+            <button class="header__mobile-btn" aria-label="Toggle menu" aria-expanded="false">
                 <span class="header__hamburger"></span>
             </button>
 
@@ -55,8 +58,10 @@
                 <div class="hero__content reveal">
                     <span class="hero__subtitle">Beginner's GeoGuessr Guide</span>
                     <h1 class="hero__title">Poznávej svět<br>krok za krokem</h1>
-                    <p class="hero__desc">Nauč se základy nejpopulárnější geografické hry. Nepotřebuješ číst stovky stran
-                        expertních dokumentů, abys mohl začít hrát a bavit se. Náš průvodce tě naučí to nejdůležitější.</p>
+                    <p class="hero__desc">Nauč se základy nejpopulárnější geografické hry. Nepotřebuješ číst stovky
+                        stran
+                        expertních dokumentů, abys mohl začít hrát a bavit se. Náš průvodce tě naučí to nejdůležitější.
+                    </p>
                     <a href="guide.html" class="btn">Začni s průvodcem</a>
                 </div>
             </div>
@@ -67,13 +72,16 @@
             <div class="container">
                 <div class="u-text-center reveal">
                     <h2 class="section__title">Co je GeoGuessr?</h2>
-                    <p class="section__subtitle u-max-width-800 u-mb-3rem">
-                        GeoGuessr je online hra, která vás „vyhodí“ na náhodném místě na světě pomocí Google Street View.
+                    <p class="section__subtitle section__subtitle--mb-lg u-max-width-800">
+                        GeoGuessr je online hra, která vás „vyhodí“ na náhodném místě na světě pomocí Google Street
+                        View.
                         Vaším úkolem je rozhlédnout se, najít stopy a uhodnout, kde přesně se nacházíte.
                     </p>
                     <p class="u-max-width-800 u-font-1-1 u-opacity-90">
-                        Pro naprostého nováčka může být hra zastrašující. Mistři světa poznají stéblo trávy a druh kamení.
-                        Ale my ti ukážeme, že se dá hrát i bez biflování. S naším průvodcem si osvojíš několik jednoduchých
+                        Pro naprostého nováčka může být hra zastrašující. Mistři světa poznají stéblo trávy a druh
+                        kamení.
+                        Ale my ti ukážeme, že se dá hrát i bez biflování. S naším průvodcem si osvojíš několik
+                        jednoduchých
                         pravidel – tzv. <em>mety</em> (meta-informace) – díky kterým už nikdy nespleteš kontinent.
                     </p>
                 </div>
@@ -81,7 +89,7 @@
         </section>
 
         <!-- Features Section -->
-        <section class="section u-bg-white">
+        <section class="section section--bg-white">
             <div class="container reveal">
                 <div class="u-text-center">
                     <h2 class="section__title">Co na webu najdeš</h2>
@@ -90,7 +98,7 @@
 
                 <div class="features-grid">
                     <!-- Feature 1 -->
-                    <article class="feature reveal" style="transition-delay: 0.1s;">
+                    <article class="card feature reveal" style="transition-delay: 0.1s;">
                         <div class="feature__icon">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -104,7 +112,7 @@
                     </article>
 
                     <!-- Feature 2 -->
-                    <article class="feature reveal" style="transition-delay: 0.2s;">
+                    <article class="card feature reveal" style="transition-delay: 0.2s;">
                         <div class="feature__icon">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -118,7 +126,7 @@
                     </article>
 
                     <!-- Feature 3 -->
-                    <article class="feature reveal" style="transition-delay: 0.3s;">
+                    <article class="card feature reveal" style="transition-delay: 0.3s;">
                         <div class="feature__icon">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -154,9 +162,12 @@
                     <div class="footer__title">Rychlé odkazy</div>
                     <ul class="footer__list">
                         <li class="footer__list-item"><a href="index.html" class="footer__list-link">Domů</a></li>
-                        <li class="footer__list-item"><a href="guide.html" class="footer__list-link">Průvodce metami</a></li>
-                        <li class="footer__list-item"><a href="pricing.html" class="footer__list-link">Ceny předplatného</a></li>
-                        <li class="footer__list-item"><a href="resources.html" class="footer__list-link">Externí zdroje</a></li>
+                        <li class="footer__list-item"><a href="guide.html" class="footer__list-link">Průvodce metami</a>
+                        </li>
+                        <li class="footer__list-item"><a href="pricing.html" class="footer__list-link">Ceny
+                                předplatného</a></li>
+                        <li class="footer__list-item"><a href="resources.html" class="footer__list-link">Externí
+                                zdroje</a></li>
                     </ul>
                 </div>
                 <div>

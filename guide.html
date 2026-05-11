@@ -10,9 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
 </head>
 <body>
+
+    <!-- Header Overlay -->
+    <div class="header__overlay" aria-hidden="true"></div>
 
     <!-- Header / Navigation -->
     <header class="header">
@@ -26,7 +30,7 @@
                 <span class="header__logo-text">GeoGuide</span>
             </a>
 
-            <button class="header__mobile-btn" aria-label="Toggle menu">
+            <button class="header__mobile-btn" aria-label="Toggle menu" aria-expanded="false">
                 <span class="header__hamburger"></span>
             </button>
 
@@ -51,12 +55,12 @@
         </section>
 
         <!-- Gallery Section -->
-        <section class="section u-pt-0">
+        <section class="section section--no-pt">
             <div class="container">
                 <div class="gallery-grid">
                     
                     <!-- Card 1 -->
-                    <article class="meta-card reveal" data-meta="sun">
+                    <article class="card meta-card reveal" data-meta="sun">
                         <img src="assets/images/guide/whattolook_sundirection.webp" alt="Slunce nad silnicí" class="meta-card__img" width="600" height="400">
                         <div class="meta-card__content">
                             <h2 class="meta-card__title">SUN META</h2>
@@ -66,7 +70,7 @@
                     </article>
 
                     <!-- Card 2 -->
-                    <article class="meta-card reveal" data-meta="drive-side" style="transition-delay: 0.1s;">
+                    <article class="card meta-card reveal" data-meta="drive-side" style="transition-delay: 0.1s;">
                         <img src="assets/images/guide/driving_direction.jpg" alt="Strana řízení" class="meta-card__img" width="600" height="400">
                         <div class="meta-card__content">
                             <h2 class="meta-card__title">STRANA ŘÍZENÍ</h2>
@@ -76,7 +80,7 @@
                     </article>
 
                     <!-- Card 3 -->
-                    <article class="meta-card reveal" data-meta="lines" style="transition-delay: 0.2s;">
+                    <article class="card meta-card reveal" data-meta="lines" style="transition-delay: 0.2s;">
                         <img src="assets/images/guide/road_lines_meta.png" alt="Čáry na silnici" class="meta-card__img" width="600" height="400">
                         <div class="meta-card__content">
                             <h2 class="meta-card__title">ČÁRY NA SILNICI</h2>
@@ -86,7 +90,7 @@
                     </article>
 
                     <!-- Card 4 -->
-                    <article class="meta-card reveal" data-meta="plates" style="transition-delay: 0.3s;">
+                    <article class="card meta-card reveal" data-meta="plates" style="transition-delay: 0.3s;">
                         <img src="assets/images/guide/number-plates-of-europe-v0-w89xlab9bzdc1.webp" alt="Poznávací značky" class="meta-card__img" width="600" height="400">
                         <div class="meta-card__content">
                             <h2 class="meta-card__title">POZNÁVACÍ ZNAČKY (SPZ)</h2>
@@ -96,7 +100,7 @@
                     </article>
 
                     <!-- Card 5 -->
-                    <article class="meta-card reveal" data-meta="language" style="transition-delay: 0.1s;">
+                    <article class="card meta-card reveal" data-meta="language" style="transition-delay: 0.1s;">
                         <img src="assets/images/guide/language_meta.png" alt="Jazyky a abecedy" class="meta-card__img" width="600" height="400">
                         <div class="meta-card__content">
                             <h2 class="meta-card__title">JAZYKY A ABECEDY</h2>
@@ -106,7 +110,7 @@
                     </article>
 
                     <!-- Card 6 -->
-                    <article class="meta-card reveal" data-meta="bollards" style="transition-delay: 0.2s;">
+                    <article class="card meta-card reveal" data-meta="bollards" style="transition-delay: 0.2s;">
                         <img src="assets/images/guide/bollard-cz.png" alt="Patníky u silnice" class="meta-card__img" width="600" height="400">
                         <div class="meta-card__content">
                             <h2 class="meta-card__title">PATNÍKY U SILNICE (BOLLARDS)</h2>
@@ -116,7 +120,7 @@
                     </article>
 
                     <!-- Card 7 -->
-                    <article class="meta-card reveal" data-meta="poles" style="transition-delay: 0.3s;">
+                    <article class="card meta-card reveal" data-meta="poles" style="transition-delay: 0.3s;">
                         <img src="assets/images/guide/ro_holeypole.png" alt="Elektrické sloupy" class="meta-card__img" width="600" height="400">
                         <div class="meta-card__content">
                             <h2 class="meta-card__title">ELEKTRICKÉ SLOUPY</h2>
@@ -126,7 +130,7 @@
                     </article>
 
                     <!-- Card 8 -->
-                    <article class="meta-card reveal" data-meta="car" style="transition-delay: 0.4s;">
+                    <article class="card meta-card reveal" data-meta="car" style="transition-delay: 0.4s;">
                         <img src="assets/images/guide/car_meta.avif" alt="Google auto" class="meta-card__img" width="600" height="400">
                         <div class="meta-card__content">
                             <h2 class="meta-card__title">GOOGLE AUTO A KAMERA</h2>
@@ -135,6 +139,110 @@
                         </div>
                     </article>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- Practical Examples Carousel Section -->
+        <section class="section section--bg-white">
+            <div class="container">
+                <div class="u-text-center reveal">
+                    <h2 class="section__title">Praktické ukázky ze hry</h2>
+                    <p class="section__subtitle u-max-width-800">Podívej se, jak vypadají mety v reálných lokacích a jak z nich zkušení hráči dedukují správnou zemi.</p>
+                </div>
+                
+                <!-- Swiper -->
+                <div class="swiper practical-carousel reveal" style="transition-delay: 0.2s;">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <article class="card meta-card">
+                                <img src="https://images.unsplash.com/photo-1542314831-c6a4203251aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Příklad 1" class="meta-card__img" width="600" height="400">
+                                <div class="meta-card__content">
+                                    <h3 class="meta-card__title">Čáry na silnici a stromy</h3>
+                                    <p class="meta-card__desc"><strong>Co vidíme:</strong> Dvojitá žlutá čára uprostřed, typické jehličnany a severoamerický styl sloupů.</p>
+                                    <div class="modal__good-for" style="display:block; margin: 0; padding: 0.5rem; background: transparent; border-left: 3px solid var(--secondary-color);">
+                                        <strong>Pravděpodobný region:</strong> Severozápad USA nebo západní Kanada
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <article class="card meta-card">
+                                <img src="https://images.unsplash.com/photo-1513622470522-26c308a2d24a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Příklad 2" class="meta-card__img" width="600" height="400">
+                                <div class="meta-card__content">
+                                    <h3 class="meta-card__title">Jízda vlevo a vegetace</h3>
+                                    <p class="meta-card__desc"><strong>Co vidíme:</strong> Auta jezdí vlevo, slunce je na severu, tropická vegetace a červená půda.</p>
+                                    <div class="modal__good-for" style="display:block; margin: 0; padding: 0.5rem; background: transparent; border-left: 3px solid var(--secondary-color);">
+                                        <strong>Pravděpodobný region:</strong> Severní část Austrálie
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <article class="card meta-card">
+                                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Příklad 3" class="meta-card__img" width="600" height="400">
+                                <div class="meta-card__content">
+                                    <h3 class="meta-card__title">Architektura a SPZ</h3>
+                                    <p class="meta-card__desc"><strong>Co vidíme:</strong> Dlouhé SPZ s modrým pruhem, úzké dlážděné uličky, kamenné domy a chybí cyrilice.</p>
+                                    <div class="modal__good-for" style="display:block; margin: 0; padding: 0.5rem; background: transparent; border-left: 3px solid var(--secondary-color);">
+                                        <strong>Pravděpodobný region:</strong> Itálie nebo jižní Francie
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <article class="card meta-card">
+                                <img src="https://images.unsplash.com/photo-1565019053308-3ab9ee3d1bf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Příklad 4" class="meta-card__img" width="600" height="400">
+                                <div class="meta-card__content">
+                                    <h3 class="meta-card__title">Střešní nosiče auta</h3>
+                                    <p class="meta-card__desc"><strong>Co vidíme:</strong> Při pohledu dolů jsou vidět černé střešní nosiče s černou páskou na pravé straně.</p>
+                                    <div class="modal__good-for" style="display:block; margin: 0; padding: 0.5rem; background: transparent; border-left: 3px solid var(--secondary-color);">
+                                        <strong>Pravděpodobný region:</strong> Ghana (Afrika)
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide">
+                            <article class="card meta-card">
+                                <img src="https://images.unsplash.com/photo-1558904541-efa843a96f0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Příklad 5" class="meta-card__img" width="600" height="400">
+                                <div class="meta-card__content">
+                                    <h3 class="meta-card__title">Bollards (Patníky)</h3>
+                                    <p class="meta-card__desc"><strong>Co vidíme:</strong> Bílý patník s tlustým červeným pruhem, rovina, borovicové lesy.</p>
+                                    <div class="modal__good-for" style="display:block; margin: 0; padding: 0.5rem; background: transparent; border-left: 3px solid var(--secondary-color);">
+                                        <strong>Pravděpodobný region:</strong> Polsko
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide">
+                            <article class="card meta-card">
+                                <img src="https://images.unsplash.com/photo-1542051812-bf2f9f514b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Příklad 6" class="meta-card__img" width="600" height="400">
+                                <div class="meta-card__content">
+                                    <h3 class="meta-card__title">Sloupy a kabely</h3>
+                                    <p class="meta-card__desc"><strong>Co vidíme:</strong> Obrovské množství kabelů, transformátory na sloupech, žluto-černé varování dole.</p>
+                                    <div class="modal__good-for" style="display:block; margin: 0; padding: 0.5rem; background: transparent; border-left: 3px solid var(--secondary-color);">
+                                        <strong>Pravděpodobný region:</strong> Japonsko
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <!-- Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
@@ -195,6 +303,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

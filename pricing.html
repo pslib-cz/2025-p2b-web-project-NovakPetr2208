@@ -15,6 +15,9 @@
 
 <body>
 
+    <!-- Header Overlay -->
+    <div class="header__overlay" aria-hidden="true"></div>
+
     <!-- Header / Navigation -->
     <header class="header">
         <div class="container header__container">
@@ -28,7 +31,7 @@
                 <span class="header__logo-text">GeoGuide</span>
             </a>
 
-            <button class="header__mobile-btn" aria-label="Toggle menu">
+            <button class="header__mobile-btn" aria-label="Toggle menu" aria-expanded="false">
                 <span class="header__hamburger"></span>
             </button>
 
@@ -54,12 +57,12 @@
         </section>
 
         <!-- Pricing Section -->
-        <section class="section u-pt-0">
+        <section class="section section--no-pt">
             <div class="container">
                 <div class="pricing-grid">
 
                     <!-- Basic Plan -->
-                    <article class="pricing-card reveal" style="transition-delay: 0.1s;">
+                    <article class="card pricing-card reveal" style="transition-delay: 0.1s;">
                         <h2 class="pricing-card__title">Basic</h2>
                         <div class="pricing-card__price">Kč 708 <span>/ rok</span></div>
                         <p class="pricing-card__period">Účtováno ročně</p>
@@ -76,7 +79,7 @@
                     </article>
 
                     <!-- Pro Plan (Recommended) -->
-                    <article class="pricing-card pricing-card--popular reveal" style="transition-delay: 0.2s;">
+                    <article class="card pricing-card pricing-card--popular reveal" style="transition-delay: 0.2s;">
                         <div class="pricing-card__badge">Doporučeno pro většinu hráčů</div>
                         <h2 class="pricing-card__title">Pro</h2>
                         <div class="pricing-card__price">Kč 948 <span>/ rok</span></div>
@@ -94,7 +97,7 @@
                     </article>
 
                     <!-- Elite Plan -->
-                    <article class="pricing-card reveal" style="transition-delay: 0.3s;">
+                    <article class="card pricing-card reveal" style="transition-delay: 0.3s;">
                         <h2 class="pricing-card__title">Elite</h2>
                         <div class="pricing-card__price">Kč 1,428 <span>/ rok</span></div>
                         <p class="pricing-card__period">Nejlepší hodnota pro profíky</p>
@@ -112,9 +115,9 @@
                 </div>
 
                 <!-- Recommendation Section -->
-                <div class="reveal u-max-width-800 u-bg-white u-p-2rem u-text-center u-mt-4rem">
+                <div class="reveal pricing-info u-max-width-800 u-text-center">
                     <h2 class="section__title" style="font-size: 1.5rem;">Naše doporučení pro začátečníky</h2>
-                    <p class="u-font-1-1 u-opacity-90" style="margin-bottom: 0;">
+                    <p class="pricing-info__text">
                         Pokud si hru chcete jen občas vyzkoušet, účet zdarma s omezením sice existuje, ale je velmi
                         frustrující. Verze <strong>Basic</strong> je dobrý start. Pokud ovšem plánujete hrát s přáteli
                         online (tzv. parties) nebo se chcete hře věnovat pravidelně, verze <strong>Pro</strong> je naprosto

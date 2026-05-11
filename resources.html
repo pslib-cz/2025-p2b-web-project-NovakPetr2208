@@ -15,6 +15,9 @@
 
 <body>
 
+    <!-- Header Overlay -->
+    <div class="header__overlay" aria-hidden="true"></div>
+
     <!-- Header / Navigation -->
     <header class="header">
         <div class="container header__container">
@@ -28,7 +31,7 @@
                 <span class="header__logo-text">GeoGuide</span>
             </a>
 
-            <button class="header__mobile-btn" aria-label="Toggle menu">
+            <button class="header__mobile-btn" aria-label="Toggle menu" aria-expanded="false">
                 <span class="header__hamburger"></span>
             </button>
 
@@ -54,13 +57,13 @@
         </section>
 
         <!-- YouTube Creators Section -->
-        <section class="section u-pt-1rem">
+        <section class="section section--sm-pt">
             <div class="container">
                 <h2 class="section__title reveal">YouTube Tvůrci</h2>
                 <div class="resource-grid">
 
                     <!-- Creator 1 -->
-                    <article class="creator-card reveal" style="transition-delay: 0.1s;">
+                    <article class="card creator-card reveal" style="transition-delay: 0.1s;">
                         <img src="assets/images/resources/zi8gzag_placeholder.jpg" alt="Zi8gzag" class="creator-card__img" width="80" height="80">
                         <div class="creator-card__info">
                             <h3 class="creator-card__name">Zi8gzag</h3>
@@ -71,7 +74,7 @@
                     </article>
 
                     <!-- Creator 2 -->
-                    <article class="creator-card reveal" style="transition-delay: 0.2s;">
+                    <article class="card creator-card reveal" style="transition-delay: 0.2s;">
                         <img src="assets/images/resources/rainbolt_placeholder.jpg" alt="Rainbolt" class="creator-card__img" width="80" height="80">
                         <div class="creator-card__info">
                             <h3 class="creator-card__name">Rainbolt</h3>
@@ -82,7 +85,7 @@
                     </article>
 
                     <!-- Creator 3 -->
-                    <article class="creator-card reveal" style="transition-delay: 0.3s;">
+                    <article class="card creator-card reveal" style="transition-delay: 0.3s;">
                         <img src="assets/images/resources/jakelyons.jpg" alt="Jake Lyons" class="creator-card__img" width="80" height="80">
                         <div class="creator-card__info">
                             <h3 class="creator-card__name">Jake Lyons</h3>
@@ -96,13 +99,13 @@
         </section>
 
         <!-- Websites Section -->
-        <section class="section u-pt-0">
+        <section class="section section--no-pt">
             <div class="container">
                 <h2 class="section__title reveal">Weby a komunitní nástroje</h2>
                 <div class="resource-grid">
 
                     <!-- Site 1 -->
-                    <article class="site-card reveal" style="transition-delay: 0.1s;">
+                    <article class="card site-card reveal" style="transition-delay: 0.1s;">
                         <img src="assets/images/resources/plonk-it.webp" alt="Plonkit.net" class="site-card__img" width="600" height="300">
                         <div class="site-card__content">
                             <h3 class="site-card__title">Plonkit.net</h3>
@@ -115,7 +118,7 @@
                     </article>
 
                     <!-- Site 2 -->
-                    <article class="site-card reveal" style="transition-delay: 0.2s;">
+                    <article class="card site-card reveal" style="transition-delay: 0.2s;">
                         <img src="assets/images/resources/channels4_profile.jpg" alt="GeoTips" class="site-card__img" width="600" height="300">
                         <div class="site-card__content">
                             <h3 class="site-card__title">GeoTips</h3>
@@ -128,7 +131,7 @@
                     </article>
 
                     <!-- Site 3 -->
-                    <article class="site-card reveal" style="transition-delay: 0.3s;">
+                    <article class="card site-card reveal" style="transition-delay: 0.3s;">
                         <img src="assets/images/resources/reddit_logo.jpg" alt="Komunitní návody na Redditu" class="site-card__img" width="600" height="300">
                         <div class="site-card__content">
                             <h3 class="site-card__title">Reddit & Discord</h3>
